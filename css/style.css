@@ -1,0 +1,156 @@
+:root {
+    --fg: black;
+    --bg: white;
+    --hl: violet;
+    --link: purple;
+}
+
+[data-theme="dark"] {
+    --fg: white;
+    --bg: black;
+    --hl: purple;
+    --link: violet;
+}
+
+body {
+    font-family: Courier New, Trebuchet MS, Arial;
+    font-size: 1.2rem;
+
+    background-color: var(--bg);
+    color: var(--fg);
+
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+}
+
+#heading {
+    background-color: var(--hl);
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#heading-title {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: -2px 2px 0px var(--bg);
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #fff;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #000;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #000;
+}
+
+input:checked+.slider:before {
+    background-color: #fff;
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.info {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    font-size: 1.5rem;
+
+    border: 2px solid var(--hl);
+    border-radius: 1rem;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+.info h2 {
+    background-color: var(--hl);
+    text-shadow: -2px 2px 0px var(--bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.info a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+
+h2 {
+    margin: 0;
+}
+
+.forderung {
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #heading {
+        font-size: 1rem;
+    }
+
+    #heading-title {
+        font-size: 2rem;
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+}
