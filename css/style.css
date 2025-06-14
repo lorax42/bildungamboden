@@ -1,15 +1,8 @@
 :root {
     --fg: black;
     --bg: white;
-    --hl: violet;
+    --hl: lightblue;
     --link: purple;
-}
-
-[data-theme="dark"] {
-    --fg: white;
-    --bg: black;
-    --hl: purple;
-    --link: violet;
 }
 
 body {
@@ -31,73 +24,19 @@ body {
     margin: 0;
     padding: 1rem;
     font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #heading-title {
-    flex-grow: 1;
     padding: 1rem;
     font-size: 3rem;
     margin: 0;
-    text-shadow: -2px 2px 0px var(--bg);
 }
 
-/* THEME SWITCHER */
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
-
-.theme-switch input {
-    display: none;
-}
-
-.slider {
-    background-color: #fff;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-
-.slider:before {
-    background-color: #000;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-}
-
-input:checked+.slider {
-    background-color: #000;
-}
-
-input:checked+.slider:before {
-    background-color: #fff;
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+#sub-heading {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #infos {
@@ -114,7 +53,6 @@ input:checked+.slider:before {
 
     font-size: 1.5rem;
 
-    border: 2px solid var(--hl);
     border-radius: 1rem;
     padding: 1rem;
     white-space: nowrap;
@@ -122,7 +60,6 @@ input:checked+.slider:before {
 
 .info h2 {
     background-color: var(--hl);
-    text-shadow: -2px 2px 0px var(--bg);
     padding: 1rem;
     border-radius: 1rem;
     text-align: center;
@@ -139,7 +76,8 @@ h2 {
 }
 
 .forderung {
-    padding: 10px 0;
+    padding: 15px 0;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 700px) {
@@ -150,6 +88,10 @@ h2 {
 
     #heading-title {
         font-size: 2rem;
+    }
+
+    #sub-heading {
+        font-size: 1rem;
     }
 
     .info {
