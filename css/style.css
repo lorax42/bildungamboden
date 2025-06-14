@@ -63,6 +63,10 @@ a {
     white-space: nowrap;
 }
 
+.info-content {
+    padding: 0 1rem;
+}
+
 .info h2 {
     background-color: var(--hl);
     padding: 1rem;
@@ -72,6 +76,16 @@ a {
 
 h2 {
     margin: 0;
+}
+
+#orga-info {
+    white-space: wrap;
+}
+
+#forderungen-liste {
+    list-style: square;
+    padding: 0;
+    list-style-position: inside;
 }
 
 .forderung {
