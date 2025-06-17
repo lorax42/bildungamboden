@@ -97,6 +97,14 @@ h2 {
     font-weight: bold;
 }
 
+#hintergruende {
+    flex-basis: 100%;
+}
+
+#hintergruende-content {
+    white-space: wrap;
+}
+
 footer {
     background-color: lightgrey;
     width: 100%;
